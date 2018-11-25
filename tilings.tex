@@ -7,98 +7,192 @@
 
 \tikzset{
   tile 1/.pic={
-    \path[pic actions]
-    (.2,0) arc[radius=.3,start angle=180,end angle=0]
-    (.4,0) arc[radius=.1,start angle=180,end angle=0]
-    (.2,1) arc[radius=.3,start angle=-180,end angle=0]
-    (.4,1) arc[radius=.1,start angle=-180,end angle=0]
-    (1,.2) arc[radius=.3,start angle=270,end angle=90]
-    (1,.4) arc[radius=.1,start angle=270,end angle=90]
-    (0,.2) arc[radius=.3,start angle=-90,end angle=90]
-    (0,.4) arc[radius=.1,start angle=-90,end angle=90]
+    \path[pic actions,draw=none]
+    (-.3,-.5) arc[radius=.3,start angle=180,end angle=0]
+    -- (.1,-.5) arc[radius=.1,start angle=0,end angle=180]
+    (-.3,.5) arc[radius=.3,start angle=-180,end angle=0]
+    -- (.1,.5) arc[radius=.1,start angle=0,end angle=-180]
+    (-.5,-.3) arc[radius=.3,start angle=-90,end angle=90]
+    -- (-.5,.1) arc[radius=.1,start angle=90,end angle=-90]
+    (.5,-.3) arc[radius=.3,start angle=270,end angle=90]
+    -- (.5,.1) arc[radius=.1,start angle=90,end angle=270]
     ;
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,fill=none]
+    (-.3,-.5) arc[radius=.3,start angle=180,end angle=0]
+    (-.1,-.5) arc[radius=.1,start angle=180,end angle=0]
+    (-.3,.5) arc[radius=.3,start angle=-180,end angle=0]
+    (-.1,.5) arc[radius=.1,start angle=-180,end angle=0]
+    (.5,-.3) arc[radius=.3,start angle=270,end angle=90]
+    (.5,-.1) arc[radius=.1,start angle=270,end angle=90]
+    (-.5,-.3) arc[radius=.3,start angle=-90,end angle=90]
+    (-.5,-.1) arc[radius=.1,start angle=-90,end angle=90]
+    ;
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   tile 2/.pic={
-    \path[pic actions]
-    (.2,0) arc[radius=.3,start angle=180,end angle=0]
-    (.4,0) arc[radius=.1,start angle=180,end angle=0]
-    (1,.2) arc[radius=.3,start angle=270,end angle=90]
-    (1,.4) arc[radius=.1,start angle=270,end angle=90]
-    (0,.2) arc[radius=.8,start angle=-90,end angle=0]
-    (0,.4) arc[radius=.6,start angle=-90,end angle=0]
-    (0,.6) arc[radius=.4,start angle=-90,end angle=0]
-    (0,.8) arc[radius=.2,start angle=-90,end angle=0]
+    \path[pic actions,draw=none]
+    (-.3,-.5) arc[radius=.3,start angle=180,end angle=0]
+    -- (.1,-.5) arc[radius=.1,start angle=0,end angle=180]
+    (.5,-.3) arc[radius=.3,start angle=270,end angle=90]
+    -- (.5,.1) arc[radius=.1,start angle=90,end angle=270]
+    (-.5,-.3) arc[radius=.8,start angle=-90,end angle=0]
+    -- (.1,.5) arc[radius=.6,start angle=0,end angle=-90]
+    (-.5,.1) arc[radius=.4,start angle=-90,end angle=0]
+    -- (-.3,.5) arc[radius=.2,start angle=0,end angle=-90]
     ;
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,fill=none]
+    (-.3,-.5) arc[radius=.3,start angle=180,end angle=0]
+    (-.1,-.5) arc[radius=.1,start angle=180,end angle=0]
+    (.5,-.3) arc[radius=.3,start angle=270,end angle=90]
+    (.5,-.1) arc[radius=.1,start angle=270,end angle=90]
+    (-.5,-.3) arc[radius=.8,start angle=-90,end angle=0]
+    (-.5,-.1) arc[radius=.6,start angle=-90,end angle=0]
+    (-.5,.1) arc[radius=.4,start angle=-90,end angle=0]
+    (-.5,.3) arc[radius=.2,start angle=-90,end angle=0]
+    ;
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   tile 3/.pic={
-    \path[pic actions]
-    (0,.6) arc[radius=.4,start angle=-90,end angle=0]
-    (0,.8) arc[radius=.2,start angle=-90,end angle=0]
-    (1,.6) arc[radius=.4,start angle=-90,end angle=-180]
-    (1,.8) arc[radius=.2,start angle=-90,end angle=-180]
-    (0,.4) arc[radius=.4,start angle=90,end angle=0]
-    (0,.2) arc[radius=.2,start angle=90,end angle=0]
-    (1,.4) arc[radius=.4,start angle=90,end angle=180]
-    (1,.2) arc[radius=.2,start angle=90,end angle=180];
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,draw=none]
+    (-.5,.1) arc[radius=.4,start angle=-90,end angle=0]
+    -- (-.3,.5) arc[radius=.2,start angle=0,end angle=-90]
+    (.5,.1) arc[radius=.4,start angle=-90,end angle=-180]
+    -- (.3,.5) arc[radius=.2,start angle=-180,end angle=-90]
+    (-.5,-.1) arc[radius=.4,start angle=90,end angle=0]
+    -- (-.3,-.5) arc[radius=.2,start angle=0,end angle=90]
+    (.5,-.1) arc[radius=.4,start angle=90,end angle=180]
+    -- (.3,-.5) arc[radius=.2,start angle=180,end angle=90];
+    \path[pic actions,fill=none]
+    (-.5,.1) arc[radius=.4,start angle=-90,end angle=0]
+    (-.5,.3) arc[radius=.2,start angle=-90,end angle=0]
+    (.5,.1) arc[radius=.4,start angle=-90,end angle=-180]
+    (.5,.3) arc[radius=.2,start angle=-90,end angle=-180]
+    (-.5,-.1) arc[radius=.4,start angle=90,end angle=0]
+    (-.5,-.3) arc[radius=.2,start angle=90,end angle=0]
+    (.5,-.1) arc[radius=.4,start angle=90,end angle=180]
+    (.5,-.3) arc[radius=.2,start angle=90,end angle=180];
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   tile 4/.pic={
-    \path[pic actions]
-    (.2,0) |- (0,.2)
-    (.4,0) |- (0,.4)
-    (.6,1) |- (1,.6)
-    (.8,1) |- (1,.8)
-    (.2,1) |- (0,.8)
-    (.4,1) |- (0,.6)
-    (.6,0) |- (1,.4)
-    (.8,0) |- (1,.2)
+    \path[pic actions,draw=none]
+    (-.3,-.5) |- (-.5,-.3)
+    -- (-.5,-.1) -| (-.1,-.5)
+    (.1,.5) |- (.5,.1)
+    -- (.5,.3) -| (.3,.5)
+    (-.3,.5) |- (-.5,.3)
+    -- (-.5,.1) -| (-.1,.5)
+    (.1,-.5) |- (.5,-.1)
+    -- (.5,-.3) -| (.3,-.5)
     ;
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,fill=none]
+    (-.3,-.5) |- (-.5,-.3)
+    (-.1,-.5) |- (-.5,-.1)
+    (.1,.5) |- (.5,.1)
+    (.3,.5) |- (.5,.3)
+    (-.3,.5) |- (-.5,.3)
+    (-.1,.5) |- (-.5,.1)
+    (.1,-.5) |- (.5,-.1)
+    (.3,-.5) |- (.5,-.3)
+    ;
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   tile 5/.pic={
-    \path[pic actions]
-    (.2,0) -- (.2,.2)
-    (.4,0) -- (.4,.2)
-    (.6,0) -- (.6,.6)
-    (.8,0) -- (.8,.6)
-    (.2,1) -- (.2,.4)
-    (.4,1) -- (.4,.4)
-    (.6,1) -- (.6,.8)
-    (.8,1) -- (.8,.8)
-    (0,.2) -- (.6,.2)
-    (0,.4) -- (.6,.4)
-    (0,.6) -- (.2,.6)
-    (0,.8) -- (.2,.8)
-    (1,.2) -- (.8,.2)
-    (1,.4) -- (.8,.4)
-    (1,.6) -- (.4,.6)
-    (1,.8) -- (.4,.8)
+    \path
+    (-.3,-.3) +(0,-\pgflinewidth) coordinate (a)
+    (-.3,-.1) +(0,\pgflinewidth) coordinate (b)
+    (.3,.3)   +(0,\pgflinewidth) coordinate (c)
+    (.3,.1)   +(0,-\pgflinewidth) coordinate (d)
+    (.1,-.3)  +(-\pgflinewidth,0) coordinate (e)
+    (-.3,.1)  +(-\pgflinewidth,0) coordinate (f)
+    (.3,-.3)  +(\pgflinewidth,0) coordinate (g)
+    (-.1,.1)  +(\pgflinewidth,0) coordinate (h)
     ;
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,draw=none]
+    (-.3,-.5) -- (a)
+    -| (-.1,-.5)
+    %
+    (.1,-.5) |- (d)
+    -- (.3,-.5)
+    %
+    (-.3,.5) -- (b)
+    -| (-.1,.5)
+    %
+    (.1,.5) |- (c)
+    -- (.3,.5)
+    %
+    (-.5,-.3) -- (e)
+    |- (-.5,-.1)
+    %
+    (-.5,.1) -- (f)
+    |- (-.5,.3)
+    %
+    (.5,-.3) -- (g)
+    |- (.5,-.1)
+    %
+    (.5,.1) -- (h)
+    |- (.5,.3)
+    ;
+    \path[pic actions,fill=none]
+    (-.3,-.5) -- (-.3,-.3)
+    (-.1,-.5) -- (-.1,-.3)
+    (.1,-.5) -- (.1,.1)
+    (.3,-.5) -- (.3,.1)
+    (-.3,.5) -- (-.3,-.1)
+    (-.1,.5) -- (-.1,-.1)
+    (.1,.5) -- (.1,.3)
+    (.3,.5) -- (.3,.3)
+    (-.5,-.3) -- (.1,-.3)
+    (-.5,-.1) -- (.1,-.1)
+    (-.5,.1) -- (-.3,.1)
+    (-.5,.3) -- (-.3,.3)
+    (.5,-.3) -- (.3,-.3)
+    (.5,-.1) -- (.3,-.1)
+    (.5,.1) -- (-.1,.1)
+    (.5,.3) -- (-.1,.3)
+    ;
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   tile 6/.pic={
-    \path[pic actions]
-    (0,.2) -- (.2,0)
-    (0,.8) -- (.2,1)
-    (1,.2) -- (.8,0)
-    (1,.8) -- (.8,1)
-    (0,.4) -- (\tileStep,.4) -- (.4,\tileStep) -- (.4,0)
-    (0,.6) -- (\tileStep,.6) -- (.4,1-\tileStep) -- (.4,1)
-    (1,.4) -- (1-\tileStep,.4) -- (.6,\tileStep) -- (.6,0)
-    (1,.6) -- (1-\tileStep,.6) -- (.6,1-\tileStep) -- (.6,1)
+    \path[pic actions,draw=none]
+    (-.3,-.5)
+    -- (-.5,-.3) --
+    (-.5,-.1) -- (-.5+\tileStep,-.1) -- (-.1,-.5+\tileStep) -- (-.1,-.5)
+    %
+    (-.3,.5)
+    -- (-.5,.3) --
+    (-.5,.1) -- (-.5+\tileStep,.1) -- (-.1,.5-\tileStep) -- (-.1,.5)
+    %
+    (.3,-.5)
+    -- (.5,-.3) --
+    (.5,-.1) -- (.5-\tileStep,-.1) -- (.1,-.5+\tileStep) -- (.1,-.5)
+    %
+    (.3,.5)
+    -- (.5,.3) --
+    (.5,.1) -- (.5-\tileStep,.1) -- (.1,.5-\tileStep) -- (.1,.5)
+    %
     ;
-    \path[outline/.try] (0,0) rectangle (1,1);
+    \path[pic actions,fill=none]
+    (-.5,-.3) -- (-.3,-.5)
+    (-.5,.3) -- (-.3,.5)
+    (.5,-.3) -- (.3,-.5)
+    (.5,.3) -- (.3,.5)
+    (-.5,-.1) -- (-.5+\tileStep,-.1) -- (-.1,-.5+\tileStep) -- (-.1,-.5)
+    (-.5,.1) -- (-.5+\tileStep,.1) -- (-.1,.5-\tileStep) -- (-.1,.5)
+    (.5,-.1) -- (.5-\tileStep,-.1) -- (.1,-.5+\tileStep) -- (.1,-.5)
+    (.5,.1) -- (.5-\tileStep,.1) -- (.1,.5-\tileStep) -- (.1,.5)
+    ;
+    \path[outline/.try] (-.5,-.5) rectangle (.5,.5);
   },
   outline/.style={},
   random tile/.code={
     \pgfmathsetmacro\randomTile{random(1,6)}%
-    \tikzset{pic type=tile \randomTile}%
+    \pgfmathsetmacro\randomAngle{random(0,3)}%
+    \tikzset{rotate=\randomAngle*90,pic type=tile \randomTile}%
   }
 }
 
 \begin{document}
+
 \vspace*{\fill}
 \centering
 \begin{tikzpicture}[
@@ -106,7 +200,7 @@
 ]
 \foreach \x in {0,...,7}
 \foreach \y in {0,...,9}
-\pic[transform shape,ultra thick,draw,at={(\x,\y)},random tile];
+\pic[transform shape,ultra thick,fill,at={(\x,\y)},random tile];
 \end{tikzpicture}
 \vspace*{\fill}
 
